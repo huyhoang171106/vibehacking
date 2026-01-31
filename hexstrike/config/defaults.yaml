@@ -1,0 +1,55 @@
+# HexStrike AI Configuration Defaults
+# Copy this file and customize as needed
+
+# Cache settings
+cache:
+  max_size: 1000        # Maximum number of cache entries
+  ttl: 3600             # Time-to-live in seconds (1 hour)
+  cleanup_interval: 300 # Cleanup expired entries every 5 minutes
+
+# Execution settings
+execution:
+  command_timeout: 300          # Default command timeout (5 minutes)
+  max_retries: 3                # Number of retries on failure
+  retry_base_delay: 1.0         # Base delay between retries (seconds)
+  retry_max_delay: 60.0         # Maximum retry delay
+  parallel_max_threads: 10      # Max threads for parallel execution
+  parallel_max_processes: 4     # Max processes for CPU-bound tasks
+
+# Network settings
+network:
+  request_timeout: 30   # HTTP request timeout
+  connect_timeout: 10   # Connection timeout
+  max_connections: 100  # Maximum concurrent connections
+  verify_ssl: true      # Verify SSL certificates
+  proxy: null           # HTTP proxy URL (e.g., "http://127.0.0.1:8080")
+
+# Tool-specific timeouts (in seconds)
+tools:
+  nmap_timeout: 600       # 10 minutes
+  sqlmap_timeout: 1800    # 30 minutes
+  nikto_timeout: 1200     # 20 minutes
+  gobuster_timeout: 600   # 10 minutes
+  nuclei_timeout: 900     # 15 minutes
+  hydra_timeout: 1800     # 30 minutes
+  hashcat_timeout: 7200   # 2 hours
+
+# Logging settings
+logging:
+  level: INFO                   # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: null                    # Log file path (null = console only)
+  max_file_size: 10485760       # 10MB
+  backup_count: 5               # Number of backup log files
+
+# Server settings
+server:
+  host: "127.0.0.1"     # Listen address
+  port: 8888            # Listen port
+  debug: false          # Enable debug mode
+  workers: 4            # Number of worker processes
+  cors_origins:         # Allowed CORS origins
+    - "*"
+
+# Custom settings (add your own here)
+custom: {}

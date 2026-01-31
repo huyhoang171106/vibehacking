@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"\\(Get-Content ''C:\\\\Users\\\\NGUYEN HUY HOANG\\\\Downloads\\\\hexstrike-ai-master\\\\hexstrike-ai-master\\\\hexstrike_server.py'' | Measure-Object -Line\\).Lines\")",
+      "Bash(ls -la \"C:\\\\Users\\\\NGUYEN HUY HOANG\\\\Downloads\\\\hexstrike-ai-master\\\\hexstrike-ai-master\\\\docs\\\\handoff\"\" 2>/dev/null || echo \"No handoff directory found \")",
+      "Bash(tree:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}
